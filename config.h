@@ -53,13 +53,13 @@
 #define KEEP_RESISTANCE_WHEN_DETACHED 1
 
 //Defines for pins:
-#define IN_1  15
-#define IN_2  17
-#define IN_3  3
-#define IN_4  8
+#define IN_1  15	//A1	PB08
+#define IN_2  17	//A3	PA04
+#define IN_3  3		//~3	PA09
+#define IN_4  8		//~8	PA06
 
-#define VREF_1 9
-#define VREF_2 4
+#define VREF_1 9	//~9	PA07
+#define VREF_2 4	//~4	PA08
 
 //for faster digitalWrite:
 #define IN_1_HIGH() (REG_PORT_OUTSET1 = PORT_PB08)
@@ -127,8 +127,8 @@
 #define CAN_DATA_FIRMWARE_VERSION 0x10
 
 // see https://github.com/arduino/ArduinoCore-samd/blob/master/variants/arduino_zero/variant.cpp
-#define CAN_PIN_CS  16  // PB09 
-#define CAN_PIN_INT 38  // PA13 
+#define CAN_PIN_CS  16	//A2	PB09 
+#define CAN_PIN_INT 38  //ATN	PA13	EDBG_GPIO0
 
 
 /*
@@ -153,14 +153,14 @@
  *    ----------- Driver temperature sensor -------------
  */
 
-#define TEMPERATURE_SENSOR_PIN A4 
+#define TEMPERATURE_SENSOR_PIN A4 	//18	PA05
 
 
 /*
  *    ----------- Fan -------------
  */
 
-#define FAN_PIN 6 // PA20
+#define FAN_PIN 6 	//~6	PA20
 #define fan_HIGH() (REG_PORT_OUTSET0 = PORT_PA20)
 #define fan_LOW() (REG_PORT_OUTCLR0 = PORT_PA20)
 
